@@ -21,10 +21,6 @@ class Employee extends Model implements HasAvatar
 {
     use HasFactory, LogsActivity;
 
-    public static function factory($count = null, $state = [])
-    {
-
-    }
 
     protected $fillable =[
         "name",
@@ -110,6 +106,6 @@ class Employee extends Model implements HasAvatar
 
     public static function newFactory()
     {
-        return new EmployeeFactory();
+        return new EmployeeFactory;
     }
 }
