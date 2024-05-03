@@ -99,6 +99,6 @@ class Employee extends Model implements HasAvatar
 
     public function getActivitylogOptions(): LogOptions
     {
-        LogOptions::defaults()->logAll();
+        return LogOptions::defaults()->logAll();
     }
 }
