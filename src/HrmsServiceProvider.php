@@ -17,7 +17,7 @@ class HrmsServiceProvider extends PackageServiceProvider
 
     public function boot(): void
     {
-        $this->publishesMigrations([__DIR__.'/../database/migrations/']);
+        $this->publishesMigrations([__DIR__.'/../database/migrations'=>database_path('migrations')],'the-a-hrms-migrations');
     }
 
     public function configurePackage(Package $package): void
