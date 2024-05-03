@@ -104,7 +104,7 @@ class Employee extends Model implements HasAvatar
         return LogOptions::defaults()->logAll();
     }
 
-    public static function newFactory()
+    protected static function newFactory()
     {
         return new EmployeeFactory;
     }
