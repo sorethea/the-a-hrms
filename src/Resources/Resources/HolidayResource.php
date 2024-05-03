@@ -4,12 +4,12 @@ namespace Sorethea\Hrms\Resources\Resources;
 
 use App\Filament\Resources\HolidayResource\Pages;
 use App\Filament\Resources\HolidayResource\RelationManagers;
-use App\Models\Holiday;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Sorethea\Hrms\Models\Holiday;
 
 class HolidayResource extends Resource
 {

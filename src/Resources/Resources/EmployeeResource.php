@@ -4,7 +4,6 @@ namespace Sorethea\Hrms\Resources\Resources;
 
 use App\Filament\Resources\EmployeeResource\Pages;
 use App\Filament\Resources\EmployeeResource\RelationManagers;
-use App\Models\Employee;
 use Carbon\Carbon;
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -12,6 +11,7 @@ use Filament\Forms\Get;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Sorethea\Hrms\Models\Employee;
 use Sorethea\Hrms\Resources\Resources\EmployeeResource\Widgets\EmployeeStat;
 
 class EmployeeResource extends Resource

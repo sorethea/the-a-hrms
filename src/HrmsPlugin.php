@@ -1,6 +1,12 @@
 <?php
 
 namespace Sorethea\Hrms;
+use Sorethea\Hrms\Resources\Resources\EmployeeResource;
+use Sorethea\Hrms\Resources\Resources\HolidayResource;
+use Sorethea\Hrms\Resources\Resources\LeaveResource;
+use Sorethea\Hrms\Resources\Resources\OrganizationalUnitResource;
+use Sorethea\Hrms\Resources\Resources\TransactionResource;
+
 class HrmsPlugin implements \Filament\Contracts\Plugin
 {
 
@@ -12,7 +18,11 @@ class HrmsPlugin implements \Filament\Contracts\Plugin
     public function register(\Filament\Panel $panel): void
     {
         $panel->resources([
-
+            EmployeeResource::class,
+            HolidayResource::class,
+            LeaveResource::class,
+            OrganizationalUnitResource::class,
+            TransactionResource::class,
         ]);
     }
 

@@ -2,10 +2,10 @@
 
 namespace Sorethea\Hrms\Resources\Exports;
 
-use App\Models\Employee;
 use Filament\Actions\Exports\ExportColumn;
 use Filament\Actions\Exports\Exporter;
 use Filament\Actions\Exports\Models\Export;
+use Sorethea\Hrms\Models\Employee;
 
 class EmployeeExporter extends Exporter
 {

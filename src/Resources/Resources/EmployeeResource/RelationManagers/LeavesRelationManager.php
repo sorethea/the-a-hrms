@@ -3,7 +3,6 @@
 namespace Sorethea\Hrms\Resources\Resources\EmployeeResource\RelationManagers;
 
 use App\Filament\Resources\EmployeeResource\RelationManagers\Model;
-use App\Models\Holiday;
 use Carbon\Carbon;
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -11,6 +10,7 @@ use Filament\Resources\RelationManagers\RelationManager;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
+use Sorethea\Hrms\Models\Holiday;
 use Sorethea\Hrms\Resources\Resources\LeaveResource;
 
 class LeavesRelationManager extends RelationManager

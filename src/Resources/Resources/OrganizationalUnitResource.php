@@ -4,13 +4,13 @@ namespace Sorethea\Hrms\Resources\Resources;
 
 use App\Filament\Resources\OrganizationalUnitResource\Pages;
 use App\Filament\Resources\OrganizationalUnitResource\RelationManagers;
-use App\Models\OrganizationalUnit;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Forms\Get;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Sorethea\Hrms\Models\OrganizationalUnit;
 
 class OrganizationalUnitResource extends Resource
 {

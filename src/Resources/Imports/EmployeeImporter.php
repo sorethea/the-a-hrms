@@ -2,10 +2,10 @@
 
 namespace Sorethea\Hrms\Resources\Imports;
 
-use App\Models\Employee;
 use Filament\Actions\Imports\ImportColumn;
 use Filament\Actions\Imports\Importer;
 use Filament\Actions\Imports\Models\Import;
+use Sorethea\Hrms\Models\Employee;
 
 class EmployeeImporter extends Importer
 {

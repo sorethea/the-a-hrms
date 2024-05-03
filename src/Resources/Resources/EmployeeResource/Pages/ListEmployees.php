@@ -3,7 +3,6 @@
 namespace Sorethea\Hrms\Resources\Resources\EmployeeResource\Pages;
 
 use App\Helpers\LeaveHelper;
-use App\Models\Employee;
 use Filament\Actions;
 use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\Select;
@@ -13,6 +12,7 @@ use Filament\Pages\Concerns\ExposesTableToWidgets;
 use Filament\Resources\Components\Tab;
 use Filament\Resources\Pages\ListRecords;
 use Illuminate\Support\Facades\DB;
+use Sorethea\Hrms\Models\Employee;
 use Sorethea\Hrms\Resources\Exports\EmployeeExporter;
 use Sorethea\Hrms\Resources\Resources\EmployeeResource;
 
