@@ -9,11 +9,13 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Sorethea\Hrms\Factories\LeaveFactory;
 use Sorethea\Hrms\Observers\LeaveObserver;
+use Spatie\Activitylog\LogOptions;
+use Spatie\Activitylog\Traits\LogsActivity;
 
 #[ObservedBy([LeaveObserver::class])]
 class Leave extends Model
 {
-    use HasFactory;
+    use HasFactory, LogsActivity;
 
     protected $fillable = [
         "employee_id",
@@ -38,4 +40,9 @@ class Leave extends Model
         return new LeaveFactory;
     }
 
+    public function getActivitylogOptions(): LogOptions
+    {
+        return LogOptions::defaults()
+            ->logAll();
+    }
 }

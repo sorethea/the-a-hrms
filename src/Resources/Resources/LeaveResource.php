@@ -125,11 +125,13 @@ class LeaveResource extends Resource
             ])
             ->actions([
                 Tables\Actions\ActionGroup::make(array_merge([
-                    Tables\Actions\ViewAction::make()
+                    Tables\Actions\ViewAction::make(),
                     //Tables\Actions\EditAction::make(),
+                    Tables\Actions\Action::make('activities')
+                        ->url(fn($record)=>self::getUrl('activities',['record'=>$record]))
+                        ->icon('heroicon-o-bolt'),
 
-                ],self::getLeaveActions())),
-
+                    ],self::getLeaveActions())),
 
             ])
             ->bulkActions([
@@ -161,6 +163,7 @@ class LeaveResource extends Resource
             'create' => \Sorethea\Hrms\Resources\Resources\LeaveResource\Pages\CreateLeave::route('/create'),
             'edit' => \Sorethea\Hrms\Resources\Resources\LeaveResource\Pages\EditLeave::route('/{record}/edit'),
             'view' => \Sorethea\Hrms\Resources\Resources\LeaveResource\Pages\ViewLeave::route('/{record}'),
+            'activities' => \Sorethea\Hrms\Resources\Resources\LeaveResource\Pages\ListLeaveActivities::route('/{record}/activities'),
         );
     }
 
