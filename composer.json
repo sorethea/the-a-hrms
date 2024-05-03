@@ -1,6 +1,6 @@
 {
     "name": "sorethea/hrms",
-    "description": "Filament plugin for HRMS.",
+    "description": "Filament plugin for Hrms.",
     "type": "plugin",
     "require": {
         "sorethea/core": "dev-main",
