@@ -1,0 +1,22 @@
+{
+    "name": "sorethea/hrms",
+    "description": "Filament plugin for HRMS.",
+    "type": "plugin",
+    "require": {
+        "sorethea/core": "dev-main",
+        "flowframe/laravel-trend": "^0.2.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Sorethea\\Hrms\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sorethea OK",
+            "email": "sorethea@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
