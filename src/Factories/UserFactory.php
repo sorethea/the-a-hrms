@@ -1,6 +1,6 @@
 <?php
 
-namespace factories;
+namespace Sorethea\Hrms\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;

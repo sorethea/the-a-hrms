@@ -1,6 +1,6 @@
 <?php
 
-namespace factories;
+namespace Sorethea\Hrms\Factories;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\Factory;

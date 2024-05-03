@@ -1,6 +1,6 @@
 <?php
 
-namespace factories;
+namespace Sorethea\Hrms\Factories;
 
 use App\Traits\LeaveTrait;
 use Carbon\Carbon;
