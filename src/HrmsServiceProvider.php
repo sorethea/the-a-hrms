@@ -17,6 +17,9 @@ class HrmsServiceProvider extends PackageServiceProvider
 
     public function boot(): void
     {
+        $this->loadMigrationsFrom([
+            '../database/migrations/'
+        ]);
     }
 
     public function configurePackage(Package $package): void
