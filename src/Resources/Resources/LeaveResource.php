@@ -4,7 +4,6 @@ namespace Sorethea\Hrms\Resources\Resources;
 
 use App\Filament\Resources\LeaveResource\Pages;
 use App\Filament\Resources\LeaveResource\RelationManagers;
-use App\Helpers\LeaveHelper;
 use Carbon\Carbon;
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -12,6 +11,7 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Collection;
+use Sorethea\Hrms\Helpers\LeaveHelper;
 use Sorethea\Hrms\Models\Holiday;
 use Sorethea\Hrms\Models\Leave;
 

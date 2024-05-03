@@ -2,9 +2,9 @@
 
 namespace Sorethea\Hrms\Resources\Resources\LeaveResource\Pages;
 
-use App\Helpers\LeaveHelper;
 use Filament\Actions;
 use Filament\Resources\Pages\ViewRecord;
+use Sorethea\Hrms\Helpers\LeaveHelper;
 use Sorethea\Hrms\Resources\Resources\LeaveResource;
 
 class ViewLeave extends ViewRecord
