@@ -214,6 +214,9 @@ class EmployeeResource extends Resource
             ->actions([
                 Tables\Actions\ActionGroup::make([
                     Tables\Actions\ViewAction::make(),
+                    Tables\Actions\Action::make('activities')
+                        ->url(fn($record)=>self::getUrl('activities',['record'=>$record]))
+                        ->icon('heroicon-o-bolt'),
                     Tables\Actions\EditAction::make(),
                 ]),
             ])
@@ -237,6 +240,7 @@ class EmployeeResource extends Resource
             'index' => \Sorethea\Hrms\Resources\Resources\EmployeeResource\Pages\ListEmployees::route('/'),
             'create' => \Sorethea\Hrms\Resources\Resources\EmployeeResource\Pages\CreateEmployee::route('/create'),
             'view' => \Sorethea\Hrms\Resources\Resources\EmployeeResource\Pages\ViewEmployee::route('/{record}'),
+            'activities' => \Sorethea\Hrms\Resources\Resources\EmployeeResource\Pages\ListEmployeeActivities::route('/{record}/activities'),
             'edit' => \Sorethea\Hrms\Resources\Resources\EmployeeResource\Pages\EditEmployee::route('/{record}/edit'),
         ];
     }

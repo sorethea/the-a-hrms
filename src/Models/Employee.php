@@ -12,11 +12,13 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Sorethea\Hrms\Observers\EmployeeObserver;
+use Spatie\Activitylog\LogOptions;
+use Spatie\Activitylog\Traits\LogsActivity;
 
 #[ObservedBy([EmployeeObserver::class])]
 class Employee extends Model implements HasAvatar
 {
-    use HasFactory;
+    use HasFactory, LogsActivity;
 
     protected $fillable =[
         "name",
@@ -93,5 +95,10 @@ class Employee extends Model implements HasAvatar
         return !empty($this->avatar_url) && !is_null($this->avatar_url)
             ?$this->avatar_url
             :config("filament-avatar.providers.ui-avatar.url")."?name=".urlencode($this->name);
+    }
+
+    public function getActivitylogOptions(): LogOptions
+    {
+        LogOptions::defaults()->logAll();
     }
 }
