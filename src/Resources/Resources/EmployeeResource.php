@@ -54,7 +54,7 @@ class EmployeeResource extends Resource
                                 ->searchable()
                                 ->required(),
                             Forms\Components\Select::make("marital_status")
-                                ->options(config("the-a-hrms.marital-status"))
+                                ->options(config("hrms.marital-status"))
                                 ->searchable()
                                 ->nullable(),
                             Forms\Components\DatePicker::make("hired_date")->required(),
@@ -111,11 +111,11 @@ class EmployeeResource extends Resource
                                     Forms\Components\TextInput::make("institution")
                                         ->required(),
                                     Forms\Components\Select::make("from")
-                                        ->options(config("the-a-hrms.years"))
+                                        ->options(config("hrms.years"))
                                         ->prefix('Year')
                                         ->required(),
                                     Forms\Components\Select::make("to")
-                                        ->options(config("the-a-hrms.years"))
+                                        ->options(config("hrms.years"))
                                         ->prefix('Year')
                                         ->required(),
                                 ])->columns(3),
@@ -140,11 +140,11 @@ class EmployeeResource extends Resource
                                     Forms\Components\TextInput::make("company_name")
                                         ->required(),
                                     Forms\Components\Select::make("from")
-                                        ->options(config("the-a-hrms.years"))
+                                        ->options(config("hrms.years"))
                                         ->prefix('Year')
                                         ->required(),
                                     Forms\Components\Select::make("to")
-                                        ->options(config("the-a-hrms.years"))
+                                        ->options(config("hrms.years"))
                                         ->prefix('Year')
                                         ->required(),
                                     Forms\Components\MarkdownEditor::make("experience")

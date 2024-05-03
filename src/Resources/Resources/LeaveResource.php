@@ -54,10 +54,10 @@ class LeaveResource extends Resource
                         })
                         ->required(),
                     Forms\Components\Select::make('type')
-                        ->options(fn()=>config("the-a-hrms.leave.type"))
+                        ->options(fn()=>config("hrms.leave.type"))
                         ->default("annual_leave"),
                     Forms\Components\Select::make('status')
-                        ->options(fn()=>config("the-a-hrms.leave.status"))
+                        ->options(fn()=>config("hrms.leave.status"))
                         ->visibleOn('view')
                         ->default("approved"),
                     Forms\Components\TextInput::make('qty')
@@ -86,13 +86,13 @@ class LeaveResource extends Resource
                     ->date()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('type')
-                    ->formatStateUsing(fn($state)=>config("the-a-hrms.leave.type.".$state))
+                    ->formatStateUsing(fn($state)=>config("hrms.leave.type.".$state))
                     ->searchable(),
                 Tables\Columns\TextColumn::make('remark')
                     ->toggleable(isToggledHiddenByDefault: true)
                     ->searchable(),
                 Tables\Columns\TextColumn::make('status')
-                    ->formatStateUsing(fn($state)=>config("the-a-hrms.leave.status.".$state))
+                    ->formatStateUsing(fn($state)=>config("hrms.leave.status.".$state))
                     ->badge()
                     ->color(fn(string $state): string => match ($state){
                         "pending"=>"info",

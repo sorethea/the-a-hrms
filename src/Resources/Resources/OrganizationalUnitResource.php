@@ -27,7 +27,7 @@ class OrganizationalUnitResource extends Resource
                         ->required()
                         ->maxLength(255),
                     Forms\Components\Select::make('type')
-                        ->options(config("the-a-hrms.outype"))
+                        ->options(config("hrms.outype"))
                         ->searchable()
                         ->nullable(),
                     Forms\Components\Textarea::make('description')
