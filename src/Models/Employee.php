@@ -3,6 +3,7 @@
 namespace Sorethea\Hrms\Models;
 
 use Carbon\Carbon;
+use factories\EmployeeFactory;
 use Filament\Models\Contracts\HasAvatar;
 use Illuminate\Database\Eloquent\Attributes\ObservedBy;
 use Illuminate\Database\Eloquent\Casts\Attribute;
@@ -19,6 +20,11 @@ use Spatie\Activitylog\Traits\LogsActivity;
 class Employee extends Model implements HasAvatar
 {
     use HasFactory, LogsActivity;
+
+    public static function factory($count = null, $state = [])
+    {
+
+    }
 
     protected $fillable =[
         "name",
@@ -100,5 +106,10 @@ class Employee extends Model implements HasAvatar
     public function getActivitylogOptions(): LogOptions
     {
         return LogOptions::defaults()->logAll();
+    }
+
+    public static function newFactory()
+    {
+        return new EmployeeFactory();
     }
 }
