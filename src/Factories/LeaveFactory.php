@@ -6,6 +6,7 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Sorethea\Hrms\Models\Employee;
 use Sorethea\Hrms\Models\Holiday;
+use Sorethea\Hrms\Models\Leave;
 use Sorethea\Hrms\Traits\LeaveTrait;
 
 /**
@@ -14,6 +15,8 @@ use Sorethea\Hrms\Traits\LeaveTrait;
 class LeaveFactory extends Factory
 {
     use LeaveTrait;
+
+    protected $model = Leave::class;
     /**
      * Define the model's default state.
      *
