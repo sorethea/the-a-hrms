@@ -12,6 +12,13 @@
             "Sorethea\\Hrms\\": "src/"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sorethea\\Hrms\\HrmsServiceProvider"
+            ]
+        }
+    },
     "authors": [
         {
             "name": "Sorethea OK",
