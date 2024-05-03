@@ -27,7 +27,7 @@ class LeavesRelationManager extends RelationManager
         return $form
             ->schema([
                 Forms\Components\Select::make('type')
-                    ->options(fn()=>config("hr.leave.type"))
+                    ->options(fn()=>config("the-a-hrms.leave.type"))
                     ->default("annual_leave"),
                 Forms\Components\DatePicker::make('from')
                     ->reactive()
@@ -54,7 +54,7 @@ class LeavesRelationManager extends RelationManager
                     ->required(),
 
                 Forms\Components\Select::make('status')
-                    ->options(fn()=>config("hr.leave.status"))
+                    ->options(fn()=>config("the-a-hrms.leave.status"))
                     ->default("approved"),
                 Forms\Components\TextInput::make('qty')
                     ->helperText("Number of leave taken in day")
@@ -83,7 +83,7 @@ class LeavesRelationManager extends RelationManager
                 Tables\Columns\TextColumn::make('qty'),
                 Tables\Columns\TextColumn::make('status')
                     ->badge()
-                    ->formatStateUsing(fn($state)=>config("hr.leave.status.".$state))
+                    ->formatStateUsing(fn($state)=>config("the-a-hrms.leave.status.".$state))
                     ->color(fn(string $state): string => match ($state){
                         "pending"=>"info",
                         "approved"=>"success",

@@ -45,7 +45,7 @@ class LeaveFactory extends Factory
         }
         $from = fake()->randomElement($workingDates);
         $to = $this->addWorkingDays($from,$qty-1,$publicHolidays);
-        //$status = fake()->randomElement(array_keys(config("hr.leave.status")));
+        //$status = fake()->randomElement(array_keys(config("the-a-hrms.leave.status")));
 //        if($status!="rejected"){
 //            $employee->update(["leave_balance"=>$leaveBalance-$qty]);
 //        }
@@ -54,7 +54,7 @@ class LeaveFactory extends Factory
             "from" =>$from,
             "to"=>$to,
             "remark"=>fake()->realTextBetween(20,50),
-            "type"=>fake()->randomElement(array_keys(config("hr.leave.type"))),
+            "type"=>fake()->randomElement(array_keys(config("the-a-hrms.leave.type"))),
             "qty"=>$qty,
             "paid_leave"=>true,
         ];
