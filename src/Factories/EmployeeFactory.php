@@ -4,6 +4,7 @@ namespace Sorethea\Hrms\Factories;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Sorethea\Hrms\Models\Employee;
 use Sorethea\Hrms\Models\OrganizationalUnit;
 
 /**
@@ -13,7 +14,7 @@ class EmployeeFactory extends Factory
 {
     public $i = 0;
 
-
+    protected $model = Employee::class;
     /**
      * Define the model's default state.
      *
