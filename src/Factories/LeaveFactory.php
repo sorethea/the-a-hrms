@@ -2,11 +2,11 @@
 
 namespace Sorethea\Hrms\Factories;
 
-use App\Traits\LeaveTrait;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Sorethea\Hrms\Models\Employee;
 use Sorethea\Hrms\Models\Holiday;
+use Sorethea\Hrms\Traits\LeaveTrait;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\Sorethea\Hrms\Models\Leave>
