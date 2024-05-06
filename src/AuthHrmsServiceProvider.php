@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Sorethea\Hrms;
 
 
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
