@@ -1,11 +1,11 @@
 <?php
 
 namespace Sorethea\Hrms;
-use Sorethea\Hrms\Resources\Resources\EmployeeResource;
-use Sorethea\Hrms\Resources\Resources\HolidayResource;
-use Sorethea\Hrms\Resources\Resources\LeaveResource;
-use Sorethea\Hrms\Resources\Resources\OrganizationalUnitResource;
-use Sorethea\Hrms\Resources\Resources\TransactionResource;
+use Sorethea\Hrms\Resources\EmployeeResource;
+use Sorethea\Hrms\Resources\HolidayResource;
+use Sorethea\Hrms\Resources\LeaveResource;
+use Sorethea\Hrms\Resources\OrganizationalUnitResource;
+use Sorethea\Hrms\Resources\TransactionResource;
 
 class HrmsPlugin implements \Filament\Contracts\Plugin
 {
